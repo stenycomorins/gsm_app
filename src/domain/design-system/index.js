@@ -9,7 +9,11 @@ import {
     TextArea, 
     Accordian, 
     Check, 
-    Button
+    Button,
+    GhostButton,
+    Pagination,
+    ListCount,
+    Breadcrumb
   } from "common/design-system";
   
   export default function DesignSystem () {
@@ -80,11 +84,52 @@ import {
             </div>
 
             <h4 class="header-title mb-3">Buttons</h4>
-            <Button type="primary" label="Primary Button"/>
-            <Button type="secondary" label="Secondary Button"/>
-            <Button label="Disabled Button" disabled={true}/>
-            <Button label="Outline Default" border={true} outline="default" />
-            <Button label="Outline light" border={true} outline="light" />
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title ">Default buttons</h4>
+                        <div class="button-list">
+                            <Button type="primary" label="Primary Button"/>
+                            <Button type="secondary" label="Secondary Button"/>
+                            <Button disabled={true} label="Disabled Button"/>
+                        </div><br/><br/>
+                        <h4 class="header-title ">Bordered buttons</h4>
+                        <div class="button-list">
+                            <Button border={true} outline="default" label="Outline Default"/>
+                            <Button border={true} outline="light" label="Outline light"/>
+                        </div><br/><br/>
+                        <h4 class="header-title ">Button sizes</h4>
+                        <div class="button-list">
+                            <Button type="primary" label="Normal"/>
+                            <Button type="secondary" label="Small" size="small"/>
+                        </div><br/><br/>
+                        <h4 class="header-title ">Block buttons</h4><br/>
+                        <Button type="primary" display="block" label="primary-block button"/>
+                        <Button type="secondary" display="block" label="secondary-block button"/>
+                        <Button type="primary" label="small-primary-block" size="small" display="block"/>
+                        <Button type="secondary" label="small-secondary-block" size="small" display="block"/><br/><br/><br/>
+                        <h4 class="header-title ">Default ghost buttons</h4>
+                        <div class="button-list">
+                            <GhostButton label="icon Button" />
+                            <GhostButton label="icon Button disabled" disabled={true}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title ">pagination theme</h4><br/>
+                        <Pagination /><br/>
+                        <h4 class="header-title ">page list count theme</h4><br/>
+                        <ListCount />
+                        <hr class="my-4"/>
+                        <h4 class="header-title ">Breadcrumb — White theme</h4>
+                        <Breadcrumb />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
